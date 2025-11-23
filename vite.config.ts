@@ -27,7 +27,11 @@ export default defineConfig(({ mode }) => {
           entryFileNames: 'assets/[name].[hash].js',
         },
       },
+      // Copy public directory to dist
+      assetsInlineLimit: 0, // Ensures all assets are copied as files
     },
+    // Ensure public directory is properly served
+    publicDir: 'public',
     server: {
       port: 3000,
     },

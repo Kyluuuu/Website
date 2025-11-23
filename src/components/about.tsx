@@ -13,7 +13,7 @@ export const About = () => {
           <div className="relative p-1 border border-primary/50 box-glow" style={{ clipPath: 'polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)' }}>
             <Avatar className="h-40 w-40" style={{ clipPath: 'polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)' }}>
             <AvatarImage
-                src="./src/assets/ProfilePictureLN.jpg"
+                src="/ProfilePictureLN.jpg"
                 alt="Thomas Mikic"
                 style={{
                   objectFit: "cover",
