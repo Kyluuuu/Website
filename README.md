@@ -1,73 +1,91 @@
-# React + TypeScript + Vite
+Portfolio Website with Hacker Theme
+===================================
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio website built with React, TypeScript, and Vite, featuring a sleek hacker/cyberpunk aesthetic.​
 
-Currently, two official plugins are available:
+Overview
+--------
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A modern, responsive portfolio website built with React 18, TypeScript, and Vite, styled with a dark, hacker/cyberpunk theme and smooth animations. The project uses Tailwind CSS for rapid UI development and includes both dark and light mode support.​
 
-## React Compiler
+Features
+--------
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+-   Modern Tech Stack: Built with React 18, TypeScript, and Vite.​
 
-## Expanding the ESLint configuration
+-   Responsive Design: Optimized for desktop, tablet, and mobile devices.​
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+-   Dark Theme: Cyberpunk-inspired dark mode with optional light mode.​
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+-   Performance Optimized: Fast dev server, production build, and smooth animations.​
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+-   Modern UI Components: Composed with modern React patterns and Tailwind utilities.​
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Technologies Used
+-----------------
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+-   ⚛️ React 18​
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+-   🔷 TypeScript​
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+-   ⚡ Vite​
+
+-   🎨 Tailwind CSS​
+
+-   📱 Fully responsive layout​
+
+-   🌓 Dark/Light mode support​
+
+Getting Started
+---------------
+
+Prerequisites
+-------------
+
+-   Node.js 18+ and npm installed on your machine.​
+
+Installation
+------------
+
+1.  Clone the repository:
+
+    bash
+
+    `git clone https://github.com/Kyluuuu/websiteporfolio2.git cd websiteporfolio2 `
+
+2.  Install dependencies:
+
+    bash
+
+    `npm  install  `
+
+3.  Start the development server:
+
+    bash
+
+    `npm run dev `
+
+4.  Open `http://localhost:5173` in your browser.​
+
+Building for Production
+-----------------------
+
+bash
+
+`# Build for production  npm run build   # Preview the production build  npm run preview `
+
+The build command outputs a static bundle suitable for deployment to any static hosting provider.​
+
+Customization
+-------------
+
+-   Update theme colors and global styles in `src/index.css` or Tailwind config.
+
+-   Modify text and layout in the relevant React component files under `src`.
+
+-   Add or update projects in the Projects component to showcase your work.​
+
+License
+-------
+
+This project is open source and available under the MIT License (see the `LICENSE` file in the repository).[](https://github.com/pages-themes/hacker)​
