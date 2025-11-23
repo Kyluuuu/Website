@@ -3,13 +3,16 @@ import react from '@vitejs/plugin-react'
 import path from 'path'
 
 // https://vitejs.dev/config/
-export default defineConfig(({ command, mode }) => {
+export default defineConfig(({ mode }) => {
   // Load env file based on `mode` in the current directory and all parent directories
   const env = loadEnv(mode, process.cwd(), '')
   
+  const isProduction = mode === 'production'
+  const base = isProduction ? '/websiteporfolio2/' : '/'
+  
   return {
     plugins: [react()],
-    base: env.NODE_ENV === 'production' ? '/websiteporfolio2/' : '/',
+    base,
     resolve: {
       alias: {
         '@': path.resolve(__dirname, './src'),
@@ -31,5 +34,8 @@ export default defineConfig(({ command, mode }) => {
     server: {
       port: 3000,
     },
+    define: {
+      'import.meta.env.BASE_URL': JSON.stringify(base)
+    }
   }
 })
