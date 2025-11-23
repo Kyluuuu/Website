@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 84% 4%;
+    --foreground: 210 40% 98%;
+    --card: 222 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 173 97% 50%; /* Neon Cyan */
+    --primary-foreground: 222 84% 4%;
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 320 97% 50%; /* Neon Magenta */
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 173 97% 50% / 0.2;
+    --input: 217 33% 17%;
+    --ring: 173 97% 50%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222 84% 4%;
+    --foreground: 210 40% 98%;
+    --card: 222 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 173 97% 50%;
+    --primary-foreground: 222 84% 4%;
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 320 97% 50%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 173 97% 50% / 0.2;
+    --input: 217 33% 17%;
+    --ring: 173 97% 50%;
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+  body {
+    @apply bg-background text-foreground;
+    background-image:
+      linear-gradient(hsl(var(--primary) / 0.05) 1px, transparent 1px),
+      linear-gradient(to right, hsl(var(--primary) / 0.05) 1px, transparent 1px);
+    background-size: 2rem 2rem;
+    overflow-x: hidden;
+  }
+
+  body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: repeating-linear-gradient(
+      0deg,
+      hsla(0, 0%, 0%, 0.15),
+      hsla(0, 0%, 0%, 0.15) 1px,
+      transparent 1px,
+      transparent 2px
+    );
+    animation: scanlines 10s linear infinite;
+    pointer-events: none;
+    z-index: 9999;
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 8px hsl(var(--primary)), 0 0 20px hsl(var(--primary) / 0.5);
+  }
+  .text-glow-accent {
+    text-shadow: 0 0 8px hsl(var(--accent)), 0 0 20px hsl(var(--accent) / 0.5);
+  }
+  .box-glow {
+    box-shadow: 0 0 15px hsl(var(--primary) / 0.5), 0 0 30px hsl(var(--primary) / 0.3), inset 0 0 10px hsl(var(--primary) / 0.4);
+  }
+}
+
+body {
+  font-family: 'Geist Sans', system-ui, -apple-system, sans-serif;
+}
+
+.font-mono {
+  font-family: 'Geist Mono', monospace;
+}
