@@ -22,7 +22,7 @@ export const Hero = () => {
             </a>
           </Button>
           <Button variant="ghost" size="lg" asChild className="text-muted-foreground hover:bg-primary/10 hover:text-primary">
-            <a href="/Thomas_Mikic_Resume2.pdf" download="Thomas_Mikic_Resume.pdf" rel="noopener noreferrer">Download CV</a>
+            <a href="/Website/Thomas_Mikic_Resume2.pdf" download="Thomas_Mikic_Resume.pdf" rel="noopener noreferrer">Download CV</a>
           </Button>
         </div>
         <div className="mt-10 flex justify-center gap-8">

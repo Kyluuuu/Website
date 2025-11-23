@@ -18,7 +18,7 @@ const skillCategories = [
 
 export const Skills = () => {
   return (
-    <section id="skills" className="container py-12 md:py-24 bg-background/50 border border-border rounded-lg animate-fade-in-up" style={{ animationDelay: "0.2s", animationFillMode: "backwards" }}>
+    <section id="skills" className="container p-12 md:py-24 bg-background/50 border border-border rounded-lg animate-fade-in-up" style={{ animationDelay: "0.2s", animationFillMode: "backwards" }}>
       <div className="text-center">
         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-mono uppercase text-primary text-glow">
           [ Technical Skills ]
