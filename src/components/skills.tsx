@@ -18,7 +18,10 @@ const skillCategories = [
 
 export const Skills = () => {
   return (
-    <section id="skills" className="container p-12 md:py-24 bg-background/50 border border-border rounded-lg animate-fade-in-up" style={{ animationDelay: "0.2s", animationFillMode: "backwards" }}>
+    <section 
+      id="skills" 
+      className="container p-12 md:py-24 bg-background/50 border border-border rounded-lg"
+    >
       <div className="text-center">
         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-mono uppercase text-primary text-glow">
           [ Technical Skills ]
@@ -29,13 +32,22 @@ export const Skills = () => {
       </div>
       <div className="grid gap-8 md:grid-cols-3 mt-8">
         {skillCategories.map((category) => (
-          <Card key={category.title} className="bg-secondary/50 backdrop-blur-sm border-2 border-border transition-all duration-300 ease-in-out hover:border-primary hover:box-glow">
+          <Card 
+            key={category.title} 
+            className="bg-secondary/50 border-2 border-border hover:border-primary transition-colors duration-200"
+          >
             <CardHeader>
-              <CardTitle className="font-mono text-accent text-center">{category.title}</CardTitle>
+              <CardTitle className="font-mono text-accent text-center">
+                {category.title}
+              </CardTitle>
             </CardHeader>
             <CardContent className="flex flex-wrap justify-center gap-2">
               {category.skills.map((skill) => (
-                <Badge key={skill} variant="outline" className="border-primary/50 text-primary bg-primary/10 font-mono">
+                <Badge 
+                  key={skill} 
+                  variant="outline" 
+                  className="border-primary/50 text-primary bg-primary/10 font-mono hover:bg-primary/20 transition-colors"
+                >
                   {skill}
                 </Badge>
               ))}

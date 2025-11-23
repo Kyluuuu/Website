@@ -52,7 +52,10 @@ const projects = [
 
 export const Projects = () => {
   return (
-    <section id="projects" className="container py-12 md:py-24 animate-fade-in-up" style={{ animationDelay: "0.4s", animationFillMode: "backwards" }}>
+    <section 
+      id="projects" 
+      className="container py-12 md:py-24"
+    >
       <div className="text-center">
         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-mono uppercase text-primary text-glow">
           [ Featured Projects ]
@@ -63,23 +66,40 @@ export const Projects = () => {
       </div>
       <div className="grid gap-8 md:grid-cols-2 mt-8">
         {projects.map((project) => (
-          <Card key={project.title} className="group relative flex flex-col overflow-hidden bg-secondary/50 backdrop-blur-sm border-2 border-border transition-all duration-300 ease-in-out hover:border-primary hover:box-glow">
+          <Card 
+            key={project.title} 
+            className="group relative flex flex-col overflow-hidden bg-secondary/50 border-2 border-border hover:border-primary transition-colors duration-200"
+          >
             <CardHeader className="z-10">
               <CardTitle className="flex items-center justify-between font-mono text-accent">
                 <span className="flex items-center gap-3">
                   {project.icon}
                   {project.title}
                 </span>
-                <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-muted-foreground transition-transform group-hover:text-primary group-hover:rotate-45">
+                <a 
+                  href={project.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                  aria-label={`View ${project.title} project`}
+                >
                   <ArrowUpRight className="h-7 w-7" />
                 </a>
               </CardTitle>
-              <CardDescription className="pt-2 text-muted-foreground">{project.description}</CardDescription>
+              <CardDescription className="pt-2 text-muted-foreground">
+                {project.description}
+              </CardDescription>
             </CardHeader>
             <CardContent className="z-10 flex-grow flex flex-col justify-end">
               <div className="flex flex-wrap gap-2">
                 {project.tags.map((tag) => (
-                  <Badge key={tag} variant="outline" className="border-accent/50 text-accent bg-accent/10">{tag}</Badge>
+                  <Badge 
+                    key={tag} 
+                    variant="outline" 
+                    className="border-accent/50 text-accent bg-accent/10"
+                  >
+                    {tag}
+                  </Badge>
                 ))}
               </div>
             </CardContent>
