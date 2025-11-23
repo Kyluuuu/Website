@@ -29,6 +29,7 @@ export default defineConfig(({ mode }) => {
       },
       // Copy public directory to dist
       assetsInlineLimit: 0, // Ensures all assets are copied as files
+      copyPublicDir: true, // Explicitly copy public directory
     },
     // Ensure public directory is properly served
     publicDir: 'public',
