@@ -8,6 +8,9 @@ export const Header = () => {
         </a>
         <div className="flex items-center gap-4">
           <nav className="hidden md:flex items-center space-x-6 text-sm font-medium font-mono">
+            <a href="https://kyluuuu.github.io/WebsitePortfolio/" className="transition-colors hover:text-primary text-muted-foreground uppercase">
+              // Old Website
+            </a>
             <a href="#about" className="transition-colors hover:text-primary text-muted-foreground uppercase">
               // About
             </a>
