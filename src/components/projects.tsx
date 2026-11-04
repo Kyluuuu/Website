@@ -37,7 +37,7 @@ const projects = [
   {
     title: "Metro System Controller",
     description: "Built a real time metro control system in Java, C, and Python to coordinate blade runners and stations with a multidisciplinary team. Implemented multithreading for handling 1,000+ UDP requests per second and designed interface specs for hardware and software integration. Ensured reliability through extensive testing and flawless simulation.",
-    tags: ["Java", "C", "Python", "JSON", "Multithreading", "UDP"],
+    tags: ["Java", "C", "JSON", "Multithreading", "UDP"],
     link: "https://github.com/Vchandrapati/ENG3000MCP",
     icon: <LayoutTemplate className="h-6 w-6 text-primary" />
   },
@@ -66,6 +66,13 @@ export const Projects = () => {
       </div>
       <div className="grid gap-8 md:grid-cols-2 mt-8">
         {projects.map((project) => (
+          <a
+            key={project.title}
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group block"
+          >
           <Card 
             key={project.title} 
             className="group relative flex flex-col overflow-hidden bg-secondary/50 border-2 border-border hover:border-primary transition-colors duration-200"
@@ -76,15 +83,7 @@ export const Projects = () => {
                   {project.icon}
                   {project.title}
                 </span>
-                <a 
-                  href={project.link} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                  aria-label={`View ${project.title} project`}
-                >
                   <ArrowUpRight className="h-7 w-7" />
-                </a>
               </CardTitle>
               <CardDescription className="pt-2 text-muted-foreground">
                 {project.description}
@@ -104,6 +103,7 @@ export const Projects = () => {
               </div>
             </CardContent>
           </Card>
+          </a>
         ))}
       </div>
     </section>

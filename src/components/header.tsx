@@ -3,7 +3,7 @@ export const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur">
       <div className="container flex h-16 max-w-screen-2xl items-center justify-between">
-        <a href="/" className="font-mono font-bold tracking-widest text-lg text-primary text-glow uppercase">
+        <a href="https://kyluuuu.github.io/Website/" className="font-mono font-bold tracking-widest text-lg text-primary text-glow uppercase">
           TM_
         </a>
         <div className="flex items-center gap-4">
