@@ -64,32 +64,32 @@ export const Projects = () => {
           A selection of projects that showcase my passion for building software.
         </p>
       </div>
-      <div className="grid gap-8 md:grid-cols-2 mt-8">
+      <div className="grid items-stretch gap-8 md:grid-cols-2 mt-8">
         {projects.map((project) => (
           <a
             key={project.title}
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="group block"
+            className="group flex h-full"
           >
           <Card 
             key={project.title} 
-            className="group relative flex flex-col overflow-hidden bg-secondary/50 border-2 border-border hover:border-primary transition-colors duration-200"
+            className="relative flex h-full w-full flex-col overflow-hidden bg-secondary/50 backdrop-blur-sm border-2 border-border transition-all duration-300 ease-in-out hover:border-primary hover:box-glow"
           >
-            <CardHeader className="z-10">
+            <CardHeader className="z-10 flex-1">
               <CardTitle className="flex items-center justify-between font-mono text-accent">
                 <span className="flex items-center gap-3">
                   {project.icon}
                   {project.title}
                 </span>
-                  <ArrowUpRight className="h-7 w-7" />
+                  <ArrowUpRight className="h-7 w-7 shrink-0 text-muted-foreground transition-transform group-hover:text-primary group-hover:rotate-45" />
               </CardTitle>
               <CardDescription className="pt-2 text-muted-foreground">
                 {project.description}
               </CardDescription>
             </CardHeader>
-            <CardContent className="z-10 flex-grow flex flex-col justify-end">
+            <CardContent className="z-10 mt-auto flex flex-col justify-end">
               <div className="flex flex-wrap gap-2">
                 {project.tags.map((tag) => (
                   <Badge 
